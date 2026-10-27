@@ -1,0 +1,139 @@
+.page-popup-ad-add-or-update {
+  padding: 20px;
+  .new-page-title {
+    width: 100%;
+    height: 62px;
+    background: #f7f8fa;
+    box-sizing: border-box;
+    padding: 19px 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-bottom: 20px;
+
+    .line{
+      width: 4px;
+      height: 19px;
+      background: #155bd4;
+      opacity: 1;
+      border-radius: 2px;
+      margin-right: 10px;
+    }
+    .text{
+      font-size: 18px;
+      font-weight: 700;
+      color: #333;
+      opacity: 1;
+    }
+  }
+  .form-box {
+    margin-left: 40px;
+  }
+  :deep(.upload-box){
+    .el-upload {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 88px;
+      height: 88px;
+      border: 1px solid #d9d9d9;
+
+      .pic-uploader-icon {
+        width: 88px;
+        height: 88px;
+        line-height: 88px;
+        font-size: 18px;
+      }
+
+      .pic {
+        width: auto;
+        max-width: 88px;
+        height: auto;
+        max-height: 88px;
+      }
+    }
+  }
+  .custom-label{
+    display: flex;
+    align-items: center;
+    .label{
+      margin-right: 2px;
+    }
+  }
+
+  .jumpurl-box{
+    width: 355px;
+    height: 32px;
+    border: 1px solid #dcdfe6;
+    border-radius: 4px;
+    padding-right: 11px;
+    padding-left: 6px;
+    line-height: 32px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    &.disabled{
+      cursor: not-allowed;
+      background-color: #f5f7fa;
+      user-select: none;
+      .select-type{
+        background-color: #e3e3e3;
+        color: #858585;
+      }
+      .select{
+        color: #a8abb2;
+      }
+    }
+    .select-type{
+      background-color: #F0F2F5;
+      color: #a8abb2;
+      line-height: 24px;
+      font-size: 12px;
+      padding: 0 6px;
+      border-radius: 4px;
+      margin-right: 6px;
+    }
+    .select{
+      color: #606266;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .no-select{
+      color: #A8ABB2;
+    }
+  }
+
+  .custom-frequency-box{
+    .frequency{
+      margin-top: 8px;
+      span{
+        color: #606266;
+      }
+    }
+    .week-push{
+      display: flex;
+      align-items: center;
+      .checkbox-group-box{
+        margin-left: 8px;
+        // eslint-disable-next-line vue-scoped-css/no-unused-selector
+        .el-checkbox{
+          margin-right: 24px;
+        }
+      }
+    }
+  }
+
+  .date-picker {
+    display: flex;
+    :deep(.el-input__suffix-inner){
+      display: none;
+    }
+    .select-time:hover :deep(.el-input__suffix-inner){
+      display: inline-flex;
+    }
+  }
+}

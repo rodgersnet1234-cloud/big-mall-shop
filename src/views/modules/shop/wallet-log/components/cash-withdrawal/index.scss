@@ -1,0 +1,138 @@
+.component-cash-withdrawal{
+  min-width: 700px;
+
+  .shop-name {
+    font-size: 15px;
+  }
+  .balance {
+    font-size: 15px;
+    color: #e43130;
+  }
+  .el-input {
+    width: 35% !important;
+    min-width: 277px;
+  }
+  .el-textarea {
+    width: 60%;
+    min-width: 277px;
+  }
+  .el-textarea__inner {
+    width: 55%;
+  }
+  :deep(.el-input .el-input--suffix input.el-input__inner) {
+    height: 30px !important;
+    line-height: 30px !important;
+  }
+
+  :deep(.el-textarea__inner) {
+    width: 60%;
+  }
+  .withdrawal-int :deep(.el-input__inner) {
+    padding-right: 0;
+  }
+  .yzm-tips {
+    display: block;
+    color: #aaa;
+    margin-left: 120px;
+    line-height: 2em;
+    margin-bottom: 10px;
+  }
+  .error-tips {
+    color: #e43130;
+    margin-left: 10px;
+  }
+  .add-card {
+    display: block;
+    line-height: 1em;
+  }
+  .el-form-item {
+    margin-bottom: 15px;
+  }
+  :deep(.el-dialog__header) {
+    padding-bottom: 0 !important;
+  }
+  :deep(.el-dialog__body) {
+    padding: 10px 20px !important;
+  }
+  /* 银行卡 */
+  .bankcard {
+    position: relative;
+    display: inline-block;
+    width: 270px;
+    height: 90px;
+    border: 1px solid #eee;
+    padding: 0 10px 10px;
+    margin-right: 20px;
+    cursor: pointer;
+    margin-top: 10px;
+    border-radius: 5px;
+    background: #fff;
+  }
+  .bankcard:hover {
+    box-shadow: 0 2px 8px rgb(200 201 204 / 50%);
+  }
+  .close-icon {
+    text-align: right;
+    display: block;
+    height: 15px;
+    line-height: 25px;
+    font-size: 16px;
+    color: #999;
+    cursor: pointer;
+    z-index: 11;
+  }
+  .close-icon:hover {
+    color: #155bd4;
+  }
+  .card-num {
+    font-size: 15px;
+    line-height: 1.5em;
+    color: #333;
+    text-align: left;
+    margin-bottom: 30px;
+    width: 210px;
+  }
+  .card-num .tip {
+    font-size: 12px;
+    transform: scale(0.83,0.83);
+    border: 1px solid #155BD4;
+    color: #155BD4;
+    padding: 0 4px;
+    border-radius: 2px;
+    height: 17px;
+    line-height: 17px;
+    box-sizing: border-box;
+  }
+  .card-name {
+    width: 150px;
+  }
+  .card-bottom {
+    position: absolute;
+    bottom: 10px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    width: 90%;
+    justify-content: space-between;
+    line-height: 1.5em;
+  }
+  .chooseDefault :deep(.el-button--medium) {
+    padding: 0;
+  }
+  .default {
+    color: #999;
+    cursor: auto;
+  }
+  .active {
+    border: 1px solid #57A9FB;
+    background: #f5f9ff;
+  }
+  .bankcard-box{
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+  }
+  .full-width {
+    width: 100%;
+  }
+}

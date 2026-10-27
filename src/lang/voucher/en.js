@@ -1,0 +1,37 @@
+export default {
+  name: 'Voucher name',
+  voucher: 'Voucher',
+  relatedProducts: 'Related products',
+  expired: 'Invalidated',
+  startUsing: 'Enable',
+  notEnabled: 'Not enabled',
+  inputTips: 'Please fill in the name of the voucher',
+  exportDate: 'Import Date',
+  cardNum: 'Card number',
+  cardPWD: 'Card Password',
+  cardCode: 'Discount Code',
+  uploadText: 'Upload coupon instructions',
+  uploadTipsOne: '1、 Please download the coupon import template first and fill in the information according to the template. Failure to fill in the required information will result in coupon import failure',
+  uploadTipsTwo: '2、 Please choose between. xlsx or. xls files. Only one file can be imported at a time, and it is recommended to import no more than 5000 pieces of data at a time',
+  uploadTipsThree: '3、 It is not recommended to keep blank rows, as it may lead to data errors and prevent successful import',
+  excelModel: 'Voucher Details Import Template',
+  voucherDetail: 'Voucher details',
+  chooseVoucher: 'Choose voucher',
+  voucherList: 'Voucher List',
+  preBindVoucher: 'The voucher originally bound to the product',
+  voucherName: 'voucher name',
+  notEnabledTips: 'Displays unissued and non-expired passes',
+
+  item: {
+    cardNumber: 'card number',
+    cardPwd: 'card pwd',
+    couponCode: 'coupon code',
+    orderNumber: 'order number',
+    importTime: 'import time',
+    expirationTime: 'expiration time',
+    voucherItemExcelTips: 'Are you sure you want to export the voucher details？',
+    exportVoucherDetails: 'Export voucher details',
+    exportVoucherOfSearch: 'Export the filtered voucher details',
+    exportVoucherOfSelect: 'Export the selected voucher details'
+  }
+}

@@ -1,0 +1,359 @@
+.upload-block {
+  :deep(.el-upload-list__item) {
+    text-align: center;
+    line-height: 85px!important;
+  }
+  .el-upload-list--picture-card .el-upload-list__item-thumbnail {
+    display: inline-block;
+    width: auto;
+    max-width: 88px;
+    height: auto;
+    max-height: 88px;
+    vertical-align: middle;
+  }
+}
+.elx-images {
+  .el-upload-list__item,
+  .el-upload--picture-card {
+    width: 120px;
+    height: 120px;
+    line-height: 120px;
+    border-radius: 5px;
+  }
+}
+.changebox {
+  .el-form-item {
+    margin-bottom: 15px;
+  }
+  .changebox-img {
+    width: auto;
+    max-width: 350px;
+    height: 80px;
+  }
+  .old-name {
+    display: inline-block;
+    line-height: 1.5em;
+  }
+}
+
+.elx-imgbox-dialog {
+    padding: 35px 20px;
+
+  $bg: #f6f6f6;
+
+  .el-badge {
+    vertical-align: bottom;
+  }
+
+  .el-dialog {
+    width: 850px !important;
+
+    .el-dialog__header {
+      border-bottom: 1px solid #e8e8e8;
+    }
+
+    .el-dialog__body {
+      padding: 0;
+    }
+  }
+
+  .elx-foot {
+    width: 100%;
+    padding: 15px 0 20px 0px;
+    .el-button {
+      margin: 0 0 0 10px;
+    }
+  }
+
+  .file-group {
+    .upload-btn {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 10px;
+      margin-bottom: 15px;
+    }
+    .img-group-box {
+      display: flex;
+      // 左侧栏
+      .left-sidebar {
+        display: block;
+        max-height: 620px !important;
+        font-size: 13px;
+        color: #666;
+        .group-list {
+          height: 100%;
+          border-right: 1px solid #f2f3f5;
+          overflow-y: auto;
+          overflow-x: hidden;
+          .group-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 190px;
+            height: 38px;
+            line-height: 38px;
+            text-align: left;
+            box-sizing: border-box;
+            .group-name {
+              margin-right: 6px;
+              width: 100%;
+              padding: 0 20px;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              white-space: nowrap;
+              cursor: pointer;
+            }
+            .sidebar-operate {
+              .el-icon-delete,
+              .el-icon-edit {
+                margin-left: 10px;
+                cursor: pointer;
+              }
+            }
+          }
+          .group-item:hover,
+          .group-item.active {
+            background: #f2f3f5;
+          }
+        }
+      }
+      // 图片列表
+      .pick-block {
+        position: relative;
+        width: 100%;
+        max-height: 620px !important;
+        .elx-img-list-loading {
+          position: absolute;
+          left: 0;
+          right: 0;
+          z-index: 9;
+          width: 100%;
+          height:460px !important;
+          // 加载层高度
+          background: #fff;
+          text-align: center;
+
+          .el-icon-loading {
+            font-size: 50px;
+            color: #409eff;
+            line-height: 460px;
+          }
+        }
+
+        .elx-img-list {
+          padding: 10px;
+          // 图片列表高度
+          height: 470px !important;
+          .img-item {
+            $imgSize: 100px;
+            $imgMiniSize: 98px;
+            $size: 104px;
+            float: left;
+            margin: 10px;
+            width: $imgSize;
+            cursor: pointer;
+            position: relative;
+            font-size: 12px;
+            .thumb-wp {
+              width: $imgSize;
+              height: $imgSize;
+              line-height: 97px;
+              display: block;
+              border: 1px solid #f6f6f6;
+              text-align: center;
+              box-sizing: border-box;
+            }
+            img {
+              display: inline-block;
+              width: auto;
+              max-width: $imgMiniSize;
+              height: auto;
+              max-height: $imgMiniSize;
+              vertical-align: middle;
+            }
+            .title {
+              line-height: 24px;
+              height: 24px;
+              display: block;
+              background: $bg;
+              padding: 0 5px;
+              overflow: hidden;
+              text-overflow:ellipsis;
+              white-space: nowrap;
+            }
+            .operate {
+              line-height: 24px;
+              height: 24px;
+              display: block;
+              overflow: hidden;
+              margin-top: 2px;
+              padding: 0 5px;
+              .edit {
+                float: left;
+                padding-left: 5px;
+              }
+              .del {
+                float: right;
+                padding-right: 5px;
+              }
+            }
+
+            .label {
+              position: absolute;
+              z-index: 9;
+              left: 0;
+              bottom: 24px;
+              width: 100%;
+              height: 21px;
+              line-height: 21px;
+              text-align: center;
+              color: #fff;
+
+              &:after {
+                content: " ";
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                height: 21px;
+                background: #000;
+                opacity: 0.3;
+                z-index: -1;
+              }
+            }
+
+            .selected {
+              position: absolute;
+              right: -3px;
+              top: -3px;
+              width: $size;
+              height: 130px;
+              border: 3px solid #409eff;
+              border-radius: 3px;
+              text-align: right;
+              .icon {
+                background: #409eff;
+                text-align: center;
+                height: 24px;
+                width: 24px;
+                line-height: 24px;
+                display: inline-block;
+                font-size: 16px;
+                color: #fff;
+                border-radius: 0 0 0 3px;
+                position: absolute;
+                right: 0;
+                top: 0;
+              }
+            }
+          }
+
+          &::after {
+            content: " ";
+            display: table;
+            height: 0;
+            clear: both;
+            visibility: hidden;
+          }
+
+          .empty {
+            display: block;
+            width: 100%;
+            margin-top: 150px;
+            color: #bbb;
+            text-align: center;
+          }
+        }
+
+        .el-pagination {
+          position: relative;
+          padding: 5px;
+          margin: 10px 30px 0 20px;
+          text-align: right;
+          float: none;
+
+          * {
+            background: none;
+          }
+        }
+      }
+    }
+  }
+
+  .upload-block {
+    :deep(.upload-img-preview) {
+      padding: 20px;
+
+      /* 上传图片预览改为使用背景图片按比例缩放方式 */
+      .el-upload--picture-card,
+      .el-upload-list--picture-card .el-upload-list__item,
+      .el-upload-list--picture-card .el-upload-list__item .wp {
+        width: 120px;
+        height: 120px;
+        line-height: 120px;
+        background-size: cover;
+        background-position: 50% 50%;
+        background-color: #fbfdff;
+        border: 1px dashed var(--el-border-color-darker);
+      }
+
+      .el-upload-list--picture-card .el-upload-list__item-status-label i {
+        margin-top: 12px;
+        vertical-align: top;
+      }
+    }
+
+    .upload-tip {
+      padding: 0 20px;
+      font-size: 13px;
+      color: #999;
+    }
+
+    .upload-title {
+      font-size: 16px;
+      color: #666;
+      padding: 20px 0 0 20px;
+    }
+
+    .file-gropu-btn {
+      font-size: 14px;
+      padding: 20px 20px 0;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      .sel-group-name {
+        margin-right: 15px;
+      }
+    }
+  }
+}
+
+.form {
+  margin-left: 50px;
+  .el-form-item {
+    margin-bottom: 0;
+  }
+}
+
+:deep(.el-upload-list__item-actions) {
+  a {
+    i {
+      color: #fff;
+    }
+  }
+  .el-upload-list__item-preview{
+    display: none !important;
+  }
+  .el-upload-list__item-delete{
+    margin: 0;
+  }
+}
+.hide{
+  :deep(.el-upload--picture-card){
+    display: none;
+  }
+}
+.select-array :deep(.el-icon-circle-close) {
+  display: none;
+}

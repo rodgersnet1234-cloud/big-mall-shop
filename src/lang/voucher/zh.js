@@ -1,0 +1,37 @@
+export default {
+  name: '卡券名称',
+  voucher: '卡券',
+  relatedProducts: '关联商品',
+  expired: '已失效',
+  startUsing: '已发放',
+  notEnabled: '未发放',
+  inputTips: '请填写卡券名称',
+  exportDate: '导入日期',
+  cardNum: '卡号',
+  cardPWD: '卡密',
+  cardCode: '优惠码',
+  uploadText: '上传卡券说明',
+  uploadTipsOne: '1、请先下载卡券导入模板，并根据模板填写信息，未按要求填写将会导致卡券导入失败',
+  uploadTipsTwo: '2、请选择.xlsx或.xls文件，每次只能导入一个文件，建议每次导入不超过5000条数据',
+  uploadTipsThree: '3、不建议保留空白行，容易导致数据错误并不能成功导入',
+  excelModel: '卡券明细导入模板',
+  voucherDetail: '卡券明细',
+  chooseVoucher: '选择卡券',
+  voucherList: '卡券列表',
+  preBindVoucher: '商品原先绑定的卡券',
+  voucherName: '卡券名称',
+  notEnabledTips: '显示未发放且未过期卡券',
+
+  item: {
+    cardNumber: '卡号',
+    cardPwd: '卡密',
+    couponCode: '优惠码',
+    orderNumber: '订单号',
+    importTime: '导入日期',
+    expirationTime: '失效时间',
+    voucherItemExcelTips: '确定要导出卡券明细吗？',
+    exportVoucherDetails: '导出卡券明细',
+    exportVoucherOfSearch: '导出筛选出的卡券明细',
+    exportVoucherOfSelect: '导出选中的卡券明细'
+  }
+}

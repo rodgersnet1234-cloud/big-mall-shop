@@ -1,0 +1,23 @@
+export default {
+  prodStation: '商品门店',
+  stationName: '门店',
+  stationNames: '门店名称',
+  stationAddr: '门店地址',
+  addr: '地址',
+  number: '号码',
+  account: '账号',
+  password: '密码',
+  confirmPassword: '确认密码',
+  close: '关闭',
+  closeAndUpdate: '关闭并返回刷新',
+  open: '开启',
+  business: '营业',
+  platformClosed: '平台关闭',
+  underReview: '审核中',
+  auditFailure: '审核不通过',
+  successfulAudit: '审核成功',
+  businessStatus: '营业状态',
+  shopAddr: '所在区域',
+  shopDetailAddr: '详细地址',
+  platformOffline: '平台下线'
+}

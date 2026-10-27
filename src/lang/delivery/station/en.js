@@ -1,0 +1,23 @@
+export default {
+  prodStation: 'Stores name',
+  stationName: 'Stores name',
+  stationNames: 'Stores name',
+  stationAddr: 'Stores address',
+  addr: 'Address',
+  number: 'Number',
+  account: 'Account',
+  password: 'Password',
+  confirmPassword: 'Confirm password',
+  close: 'Close',
+  closeAndUpdate: 'Close and return to refresh',
+  open: 'Open',
+  business: 'Business',
+  platformClosed: 'Platform closed',
+  underReview: 'Under Review',
+  auditFailure: 'Audit Failure',
+  successfulAudit: 'Successful Audit',
+  businessStatus: 'Business Status',
+  shopAddr: 'location',
+  shopDetailAddr: 'detail adderss',
+  platformOffline: 'Platform Offline'
+}

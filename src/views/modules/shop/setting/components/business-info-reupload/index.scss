@@ -1,0 +1,93 @@
+.component-business-info-reupload {
+  .business-license-box {
+    .license-content {
+      display: flex;
+      height: 120px;
+    }
+  }
+  .id-box {
+    .upload-content {
+      .upload-img {
+        display: flex;
+        div {
+          &:nth-child(2) {
+            margin-left: 20px;
+          }
+        }
+      }
+      .upload-example {
+        display: flex;
+        // margin-top: 15px;
+        margin-left: 140px;
+        .example-box {
+          margin-left: 0;
+          &:nth-child(2) {
+            margin-left: 20px;
+          }
+        }
+      }
+      .upload-tips {
+        margin-left: 140px;
+      }
+    }
+  }
+
+  // 示例框
+  .example-box {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 120px;
+    height: 120px;
+    background: #FFFFFF;
+    border: 1px solid #EAEAEA;
+    border-radius: 3px;
+    box-sizing: border-box;
+    margin-left: 20px;
+    img {
+      display: block;
+      width: auto;
+      max-width: 100%;
+      height: auto;
+      max-height: 100%;
+    }
+    .tips {
+      position: absolute;
+      left: -1px;
+      bottom: 0;
+      width: 120px;
+      height: 20px;
+      line-height: 20px;
+      font-size: 12px;
+      color: #fff;
+      background: rgba(51, 51, 51, 0.5);
+      text-align: center;
+      border-radius: 0 0 3px 3px;
+    }
+  }
+
+  .upload-tips {
+    font-size: 12px;
+    color: #999;
+    line-height: 1.5em;
+    margin-top: 10px;
+  }
+
+  // 图片上传框样式修改
+  :deep(.el-upload) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 120px;
+    height: 121px;
+    background: #FFFFFF;
+    border: 1px solid #EAEAEA;
+    border-radius: 3px;
+    box-sizing: border-box;
+    .el-icon-plus {
+      font-size: 22px;
+      color: #EAEAEA;
+    }
+  }
+}

@@ -1,0 +1,38 @@
+
+.component-combo-list {
+  text-align: left;
+  width: 100%;
+  box-sizing: border-box;
+  line-height: 20px;
+
+  .item {
+    display: flex;
+    align-items: center;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .item-name {
+    margin-right: 5px;
+    box-sizing: border-box;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow-wrap: break-word;
+    overflow: hidden;
+  }
+
+  .item-name.sku {
+    min-width: 20px;
+    color: #999;
+  }
+
+  .item-count {
+    white-space: nowrap;
+    margin-left: 10px;
+    color: #999;
+    width: auto;
+  }
+}

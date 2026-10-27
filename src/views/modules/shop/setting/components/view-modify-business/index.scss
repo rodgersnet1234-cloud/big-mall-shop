@@ -1,0 +1,59 @@
+.component-view-modify-business {
+  & :deep(.el-dialog) {
+    min-width: 950px;
+  }
+
+  .popup {
+    display: block;
+    color: #606266;
+    font-size: 14px;
+
+    .topModifyColumn {
+      // height: 90px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #fff2f2;
+      margin: 10px;
+      padding: 10px;
+    }
+
+    .business-license-box {
+      height: 98px;
+      display: flex;
+
+      .logo-image {
+        width: 98px;
+        height: 98px;
+      }
+
+      .image-box-wrap:not(:first-child) {
+        margin-left: 20px;
+      }
+    }
+
+    .ci-wrapper {
+      display: flex;
+      justify-content: space-evenly;
+      .business-scope {
+        line-break: anywhere;
+      }
+    }
+  }
+
+  .noyet-wrap {
+    color: #999;
+  }
+
+  .foot-box {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+
+  }
+
+  div :deep(.el-image) {
+    width: 98px;
+    height: 98px;
+  }
+}

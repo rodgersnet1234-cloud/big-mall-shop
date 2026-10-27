@@ -1,0 +1,90 @@
+.page-voucher-item {
+  font-size: 14px;
+  .operation-bar {
+    display: flex;
+    align-items: center;
+    padding-left: 12px;
+  }
+  .batch-setting-dropdown {
+    .batch-setting-btn {
+      padding-right: 15px;
+      margin-right: 0;
+      &:hover {
+        .arrow::after {
+          border-top: 1px solid #155bd4;
+          border-right: 1px solid #155bd4;
+        }
+      }
+      &.active {
+        color: #155bd4;
+        border-color: #155bd4;
+        .arrow::after {
+          border-top: 1px solid #155bd4;
+          border-right: 1px solid #155bd4;
+          transform: rotate(-45deg);
+          top: 0;
+          right: 0;
+          transition: all .2s linear;
+        }
+      }
+      .arrow {
+        position: relative;
+        margin-left: 9px;
+        &::after{
+          position: relative;
+          top: -3px;
+          right: 0;
+          transition: all .2s linear;
+          content: '';
+          display: inline-block;
+          width: 6px;
+          height: 6px;
+          border-top: 1px solid #656565;
+          border-right: 1px solid #656565;
+          transform: rotate(135deg);
+        }
+      }
+    }
+  }
+
+  .search-bar {
+    .input-row {
+      .is-active {
+        color: #155bd4;
+      }
+    }
+  }
+
+  .status-nav {
+    position: relative;
+    display: block;
+    width: 100%;
+    margin-bottom: 15px;
+    height: 40px;
+    line-height: 40px;
+    border-bottom: 1px solid #ddd;
+
+    ul,
+    li {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .nav-item {
+      float: left;
+      height: 40px;
+      line-height: 40px;
+      background: #f8f8f9;
+      border: 1px solid #ddd;
+      padding: 0 20px;
+      margin: 0 -1px -1px 0;
+      cursor: pointer;
+    }
+
+    .selected {
+      background: #fff;
+      border-bottom: 1px solid #fff;
+    }
+  }
+}

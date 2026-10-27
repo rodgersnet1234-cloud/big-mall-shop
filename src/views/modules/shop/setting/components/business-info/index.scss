@@ -1,0 +1,182 @@
+.component-business-info {
+  // 工商信息
+  .business-info {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    :deep(.el-form) {
+      display: block;
+      width: 100%;
+      padding: 0 10px;
+    }
+    .business-info-wrapper {
+      width: 100%;
+      display: flex;
+      justify-content: flex-start;
+      .business-info-left {
+        .price-unit-text {
+          font-size: 14px;
+          color: #666;
+          margin-left: 15px;
+        }
+        .btn-box {
+          display: flex;
+          margin-left: 134px;
+          margin-bottom: 40px;
+          .prev-btn {
+            margin-right: 13px;
+          }
+        }
+      }
+      .business-info-right {
+        // width: 440px;
+        // width: 50%;
+        margin-left: 40px;
+        .business-license-box {
+          .license-content {
+            display: flex;
+            height: 120px;
+          }
+        }
+        .id-box {
+          .upload-content {
+            .upload-img {
+              display: flex;
+              div {
+                &:nth-child(2) {
+                  margin-left: 20px;
+                }
+              }
+            }
+            .upload-example {
+              display: flex;
+              // margin-top: 15px;
+              margin-left: 141px;
+              .example-box {
+                margin-left: 0;
+                &:nth-child(2) {
+                  margin-left: 20px;
+                }
+              }
+            }
+            .upload-tips {
+              margin-left: 141px;
+            }
+          }
+        }
+
+        // 店铺简介
+        .store-intro {
+          width: 350px;
+        }
+
+        .img-static {
+          display: block;
+          width: 120px;
+          height: 120px;
+        }
+        .img-static:not(:first-child) {
+          margin-left: 20px;
+        }
+
+        // 示例框
+        .example-box {
+          position: relative;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 120px;
+          height: 120px;
+          background: #FFFFFF;
+          border: 1px solid #EAEAEA;
+          border-radius: 3px;
+          box-sizing: border-box;
+          margin-left: 20px;
+          img {
+            display: block;
+            width: auto;
+            max-width: 100%;
+            height: auto;
+            max-height: 100%;
+          }
+          .tips {
+            position: absolute;
+            left: -1px;
+            bottom: 0;
+            width: 120px;
+            height: 20px;
+            line-height: 20px;
+            font-size: 12px;
+            color: #fff;
+            background: rgba(51, 51, 51, 0.5);
+            text-align: center;
+            border-radius: 0 0 3px 3px;
+          }
+        }
+
+        .upload-tips {
+          font-size: 12px;
+          color: #999;
+          line-height: 1.5em;
+          margin-top: 13px;
+        }
+
+        // 图片上传框样式修改
+        :deep(.el-upload) {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 120px;
+          height: 121px;
+          background: #FFFFFF;
+          border: 1px solid #EAEAEA;
+          border-radius: 3px;
+          box-sizing: border-box;
+          // img {
+          //   width: 120px;
+          // }
+          .el-icon-plus {
+            font-size: 22px;
+            color: #EAEAEA;
+          }
+        }
+      }
+    }
+  }
+  // 脚部
+  .footer {
+    .foot-box {
+      display: block;
+      .btn {
+        display: inline-block;
+        padding: 10px 20px;
+        margin-right: 10px;
+        border-radius: 2px;
+        margin-left: 110px;
+        margin-top: 40px;
+        cursor: pointer;
+        font-size: 14px;
+      }
+      .btn.primary {
+        margin-left: 0;
+        background: #155bd4;
+        color: #fff;
+      }
+      .btn.default {
+        border: 1px solid rgba(0,0,0,0.149);
+        color: rgba(0,0,0,0.65);
+        box-sizing: border-box;
+      }
+      // .btn:last-child {
+      //   border: 1px solid #d9d9d9;
+      // }
+    }
+  }
+  .end-time {
+    position: relative;
+    .text {
+      position: absolute;
+      left: 30px;
+    }
+  }
+}

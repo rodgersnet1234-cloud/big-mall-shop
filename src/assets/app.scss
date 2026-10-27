@@ -1,0 +1,22 @@
+// 兼容旧版浏览器不超出最大宽度换行问题
+.el-message{
+  width: auto !important;
+}
+
+// 不需要头部样式的dialog
+.header-no-padding {
+  .el-dialog__header {
+    min-height: auto;
+    padding: 0;
+    border: none;
+  }
+
+  .el-dialog__body {
+    padding-top: 10px;
+  }
+}
+
+// 图片裁剪显示
+img{
+  object-fit: cover !important;
+}

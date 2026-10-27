@@ -1,0 +1,87 @@
+.module-one-component {
+  width: 100%;
+  .module-one-header {
+    margin-bottom: 15px;
+    .main-title {
+      font-family: PingFang SC;
+      font-weight: bold;
+      margin: 12px 0 4px 0;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    .sub-title {
+      width: 100%;
+      font-family: PingFang SC;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+  }
+  .module-one-goodsList {
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+    margin-bottom: 18px;
+    .goods-items {
+      width: 60px;
+      &:nth-child(1) {
+        margin-right: 28px;
+      }
+      .goods-items-img {
+        position: relative;
+        .imgs_shelves {
+          position: absolute;
+          width: 60px;
+          height: 60px;
+          background: rgba(0, 0, 0, 0.6);
+          top: 0;
+          left: 0;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          img {
+            width: 50px;
+          }
+        }
+      }
+      :deep(.el-image) {
+        width: 60px;
+        height: 60px;
+        background: rgba(243, 245, 247, 0.39);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .real-price {
+        color: #e1251b;
+        text-align: center;
+        margin-top: 8px;
+        font-family: Microsoft YaHei;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        word-break: break-all;
+        span {
+          font-size: 11px;
+          &:nth-child(2) {
+            font-size: 13px;
+          }
+        }
+      }
+      .del-price {
+        font-family: PingFang SC;
+        font-weight: bold;
+        text-align: center;
+        color: #aaaaaa;
+        font-size: 11px;
+        text-decoration: line-through;
+        transform: scale(0.95);
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        word-break: break-all;
+      }
+    }
+  }
+}

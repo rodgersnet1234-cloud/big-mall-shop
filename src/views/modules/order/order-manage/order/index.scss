@@ -1,0 +1,609 @@
+.page-order {
+  padding: 20px;
+
+  .clearfix:after {
+    /*伪元素是行内元素 正常浏览器清除浮动方法*/
+    content: "";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+  }
+
+  .screening-conditions {
+    display: block;
+    padding: 20px;
+    background: #f8f8f9;
+    margin-bottom: 20px;
+
+    :deep(.el-input) {
+      width: 200px;
+    }
+  }
+
+  .operation-box {
+    display: inline-block;
+    // margin-left: 83px;
+  }
+
+  .ml10 {
+    margin-left: 10px;
+  }
+
+  .select-time-btn {
+    display: inline-block;
+    color: #606266;
+    cursor: pointer;
+    margin-left: 10px;
+    padding: 8px 15px;
+    font-size: 12px;
+    border: 1px solid #DCDFE6;
+    background: #FFFFFF;
+    line-height: 14px;
+    border-radius: 2px;
+  }
+
+  .select-time-btn:hover {
+    background: #FFFFFF;
+    border-color: #155BD4;
+    color: #155BD4;
+  }
+
+  .el-form-item {
+    .is-active {
+      color: #155bd4;
+    }
+  }
+
+  .main {
+    font-size: 14px;
+
+    .status-nav {
+      position: relative;
+      display: block;
+      width: 100%;
+      margin-bottom: 15px;
+      height: 40px;
+      line-height: 40px;
+      border-bottom: 1px solid #ddd;
+
+      ul,
+      li {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      .nav-item {
+        float: left;
+        height: 40px;
+        line-height: 40px;
+        background: #f8f8f9;
+        border: 1px solid #ddd;
+        padding: 0 20px;
+        margin: 0 -1px -1px 0;
+        cursor: pointer;
+      }
+
+      .selected {
+        background: #fff;
+        border-bottom: 1px solid #fff;
+      }
+    }
+
+    .tit {
+      margin-bottom: 15px;
+      background: #f8f8f9;
+      z-index: 11;
+    }
+
+    .fixed-top {
+      position: fixed;
+      top: 90px;
+    }
+
+    .fixed-top-w1 {
+      width: calc(100% - 100px - 130px - 40px - 20px);
+    }
+
+    .fixed-top-w2 {
+      width: calc(100% - 100px - 40px - 20px);
+    }
+
+    .column-title {
+      text-align: center;
+    }
+
+    .transaction-price {
+      text-align: right;
+    }
+  }
+
+  .el-input-number--medium .el-input-number__increase,
+  .el-input-number--medium .el-input-number__decrease {
+    width: 36px;
+    font-size: 12px;
+    height: 30px;
+    line-height: 32px;
+  }
+
+  .el-input-number__increase,
+  .el-input-number__decrease {
+    top: 2px;
+  }
+
+  .tit {
+    display: flex;
+    height: 45px;
+    align-items: center;
+  }
+
+  .tit .item {
+    padding: 0 10px;
+    width: 10%;
+    text-align: center;
+  }
+
+  .tit .product {
+    width: 25%;
+  }
+
+  .prod-tit {
+    padding: 10px;
+    background: #f8f8f9;
+    border-left: 1px solid #ebedf0;
+    border-top: 1px solid #ebedf0;
+    border-right: 1px solid #ebedf0;
+  }
+
+  .prod-tit span {
+    margin-right: 15px;
+  }
+
+  .prod-cont {
+    display: flex;
+    border-top: 1px solid #ebedf0;
+    border-bottom: 1px solid #ebedf0;
+    border-left: 1px solid #ebedf0;
+    color: #495060;
+  }
+
+  .prod-cont .item {
+    display: flex;
+    display: -webkit-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border-right: 1px solid #ebedf0;
+    text-align: center;
+    height: 100%;
+  }
+
+  button.revise-btn {
+    margin-top: 10px;
+  }
+
+  .el-button--text {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .item span {
+    display: inline-block !important;
+  }
+
+  .prod-cont .prod-item {
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid #ebedf0;
+  }
+
+  .prod-name {
+    width: 55%;
+    text-align: left;
+  }
+
+  .prod-con {
+    display: block;
+    padding: 0 !important;
+  }
+
+  .prod-con .prod-name-txt {
+    display: -webkit-box;
+    max-width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    word-break: break-word;
+    word-wrap: break-word;
+  }
+
+  .prod-price {
+    position: absolute;
+    right: 10px;
+    text-align: center;
+  }
+
+  .prod-price span {
+    display: block;
+  }
+
+  .prod-price span:first-child {
+    margin-bottom: 10px;
+  }
+
+  .prod-name .prod-info {
+    display: block;
+    color: #80848f;
+    margin-top: 30px;
+  }
+
+  .order-status {
+    display: inline-block;
+    margin-top: 15px;
+    margin-right: 4px;
+    padding: 2px 4px;
+    border: 1px solid #e43130;
+    border-radius: 2px;
+    color: #e43130;
+    font-size: 12px;
+  }
+
+  .color-primary {
+    color: #155bd4;
+    border-color: #155bd4;
+  }
+
+  .prod-cont .items.name {
+    display: flex;
+    align-items: center;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    border-bottom: 1px solid #ebedf0;
+    flex-direction: column;
+  }
+
+  .prod-cont .items.name:last-child {
+    border-bottom: none;
+  }
+
+  .info {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    width: 100%;
+  }
+
+  .prod-image {
+    margin-right: 20px;
+    width: 80px;
+    height: 80px;
+  }
+
+  .prod-image img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .item .operate {
+    color: #2d8cf0;
+  }
+
+  .item .operate .el-button + .el-button {
+    display: block;
+    margin-top: 10px;
+    margin-left: 0;
+  }
+
+  .item .totalprice {
+    color: #c00;
+    margin-bottom: 10px;
+  }
+
+  .item .price-block span {
+    display: inline-block;
+    margin-bottom: 8px;
+  }
+
+  .prod .remark {
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    background-color: #e8f7f6;
+    border-left: 1px solid #ebedf0;
+    border-right: 1px solid #ebedf0;
+    border-bottom: 1px solid #ebedf0;
+    margin-bottom: 20px;
+  }
+
+  .buyer-remark {
+    padding: 0 20px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  .empty {
+    display: block;
+    height: 200px;
+    line-height: 200px;
+    text-align: center;
+    color: #aaa;
+  }
+
+  // 修改物流弹窗
+  .change-logistics {
+    color: #333;
+    padding: 0 20px;
+  }
+
+  .dialog-footer {
+    margin-top: 20px;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .log-list {
+    max-height: 600px;
+    overflow-y: auto;
+  }
+
+  .log-info-table {
+    margin-top: 20px;
+    max-height: 600px;
+    overflow-y: auto;
+  }
+
+  .change-logistics .warning {
+    padding: 10px;
+    border: 1px solid #f1924e;
+    background: #fff5ed;
+  }
+
+  .change-logistics .item {
+    padding-bottom: 20px;
+
+    &:last-child {
+      padding-bottom: 0;
+    }
+  }
+
+  .change-logistics .item .i-tit {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+  }
+
+  .change-logistics .item .i-tit .big {
+    font-weight: 600;
+    margin-right: 15px;
+  }
+
+  .change-logistics .item .i-con {
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+  }
+
+  .change-logistics .item .i-con .label {
+    width: 80px;
+  }
+
+  .change-logistics .item .i-con .con {
+    display: flex;
+    align-items: center;
+  }
+
+  .change-logistics .item .i-con .con .con-radio {
+    margin-right: 10px;
+  }
+
+  .change-logistics .item .i-con .con .con-radio input,
+  .change-logistics .item .i-con .con .con-radio span {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 8px;
+  }
+
+  .change-logistics .item .i-con .con .con-radio input[type="radio"] {
+    margin-left: 5px;
+  }
+
+  .change-logistics .item .i-con .con .con-select {
+    position: relative;
+    padding: 6px 25px 6px 12px;
+    width: 220px;
+    height: 32px;
+    line-height: 18px;
+    border: 1px solid #ddd;
+    background: #fff;
+    border-radius: 2px;
+  }
+
+  .change-logistics .item .i-con .con .con-select::after {
+    position: absolute;
+    top: 13px;
+    right: 8px;
+    display: block;
+    width: 0;
+    height: 0;
+    content: " ";
+    font-size: 0;
+    border: 5px solid transparent;
+    border-top: 5px solid #333;
+    border-radius: 2px;
+  }
+
+  .change-logistics .item .i-con .con .con-text {
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+  }
+
+  .change-logistics .item .i-con .con .con-text .text {
+    width: 80px;
+  }
+
+  .change-logistics .item .i-con .con .con-text input[type="text"] {
+    border: 1px solid #ddd;
+    padding: 0 10px;
+    height: 30px;
+    width: 160px;
+    border-radius: 2px;
+  }
+
+  // 修改物流弹窗end
+
+  // 修改物流信息弹窗
+  .log-list {
+    margin-top: 30px;
+  }
+
+  .el-form-item__label {
+    width: 100px;
+  }
+
+  .el-form-item {
+    margin-bottom: 0;
+    margin-top: 10px;
+  }
+
+  .info-int {
+    display: flex;
+  }
+
+  .form-item {
+    margin-right: 15px;
+  }
+
+  .int-frame {
+    border-radius: 0;
+    border: 0;
+  }
+
+  .info-int .el-form-item__content,
+  .info-int .el-form-item__label,
+  .el-input__suffix-inner,
+  .el-input__icon {
+    height: 32px;
+    line-height: 32px;
+  }
+
+  input.el-input__inner {
+    // border: 0;
+    height: 32px;
+    line-height: 32px;
+    font-size: 14px;
+  }
+
+  // 修改物流信息弹窗end
+  // 确认修改
+  .el-table .cell {
+    text-align: center;
+  }
+
+  .errortip {
+    border-color: #e43130;
+  }
+
+  :deep(.input-text-algin .el-input__inner) {
+    text-align: left;
+  }
+
+  :deep(.el-form-width .el-form-item__content) {
+    width: 199px;
+  }
+}
+
+.delivery-goods-box {
+  margin: 15px 0 15px;
+
+  .item {
+    margin-right: 10px;
+    margin-left: 10px;
+    font-size: 12px;
+    cursor: pointer;
+    display: inline-block;
+
+    .img {
+      width: 60px;
+      height: 60px;
+      font-size: 0;
+      margin-bottom: 4px;
+      position: relative;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+
+      .number {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        background: rgba(0, 0, 0, 0.3);
+        color: #fff;
+        border-radius: 6px 0 6px 0;
+        font-size: 12px;
+        height: 16px;
+        line-height: 16px;
+        padding: 0 5px;
+      }
+    }
+
+    .name {
+      width: 60px;
+      height: 16px;
+      line-height: 16px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      color: #999;
+    }
+  }
+
+  .item:last-child {
+    margin: 0;
+  }
+}
+
+.buyer-info {
+  .buyer-name {
+    word-break: break-word;
+  }
+
+  .buyer-phone {
+    word-break: break-word;
+  }
+}
+
+// 赠品盒子
+.order-prod-item-give-con {
+  width: 100%;
+  padding: 10px 50px 0 0;
+  box-sizing: border-box;
+
+  .giveaway-item {
+    display: flex;
+    margin-bottom: 10px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .giveaway-item-name {
+    box-sizing: border-box;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+  }
+
+  .giveaway-item-sku-count {
+    white-space: nowrap;
+    margin-left: 10px;
+    color: #999;
+  }
+}

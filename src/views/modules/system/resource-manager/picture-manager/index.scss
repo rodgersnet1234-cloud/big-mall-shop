@@ -1,0 +1,353 @@
+.page-picture-manager {
+  $bg: #f6f6f6;
+  :deep(.elx-images) {
+    .el-upload-list__item,
+    .el-upload--picture-card {
+      width: 78px;
+      height: 78px;
+      line-height: 82px;
+      border-radius: 5px;
+    }
+  }
+  .changebox {
+    :deep(.el-form-item) {
+      margin-bottom: 15px;
+    }
+    .changebox-img {
+      width: auto !important;
+      max-width: 350px ;
+      height: 80px !important;
+    }
+    .old-name {
+      display: inline-block;
+      line-height: 1.5em;
+      word-break: break-word;
+    }
+  }
+  
+  .elx-foot {
+    padding: 15px 0 0 10px;
+    :deep(.el-button) {
+      margin: 0 0 0 10px;
+    }
+  }
+
+  .file-group {
+    padding: 20px 20px;
+    .upload-btn {
+      display: flex;
+      align-items: center;
+      padding: 0 10px;
+      margin-bottom: 15px;
+      .el-icon{
+      position: relative;
+      bottom: 1px;
+    }
+    }
+    .img-group-box {
+      display: flex;
+      // 左侧栏
+      .left-sidebar {
+        display: block;
+        height: 620px;
+        font-size: 13px;
+        color: #666;
+        .group-list {
+          height: 100%;
+          border-right: 1px solid #f2f3f5;
+          overflow-y: auto;
+          overflow-x: hidden;
+          padding: 10px;
+          .group-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 190px;
+            padding: 0 10px;
+            height: 38px;
+            line-height: 38px;
+            text-align: left;
+            box-sizing: border-box;
+            .group-name {
+              margin-right: 6px;
+              min-width: 100px;
+              max-width: 118px;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              white-space: nowrap;
+              cursor: pointer;
+            }
+            .sidebar-operate {
+              .el-icon-delete,
+              .el-icon-edit {
+                margin-left: 10px;
+                cursor: pointer;
+              }
+            }
+          }
+          .group-item:hover,
+          .group-item.active {
+            background: #f2f3f5;
+          }
+        }
+      }
+      // 图片列表
+      .pick-block {
+        position: relative;
+        width: 800px;
+        height: 620px;
+        .elx-img-list-loading {
+          position: absolute;
+          left: 0;
+          right: 0;
+          z-index: 9;
+          width: 100%;
+          height: 520px;
+          // 加载层高度
+          background: #fff;
+          text-align: center;
+
+          .el-icon-loading {
+            font-size: 50px;
+            color: #409eff;
+            line-height: 460px;
+          }
+        }
+
+        .elx-img-list {
+          padding: 10px;
+          // 图片列表高度
+          height: 570px;
+          width: 800px;
+          .img-item {
+            $imgSize: 100px;
+            $imgMiniSize: 98px;
+            $size: 104px;
+            float: left;
+            margin: 10px;
+            width: $imgSize;
+            cursor: pointer;
+            position: relative;
+            font-size: 12px;
+            .thumb-wp {
+              width: $imgSize;
+              height: $imgSize;
+              line-height: 97px;
+              display: block;
+              border: 1px solid #f6f6f6;
+              text-align: center;
+              box-sizing: border-box;
+            }
+            img {
+              display: inline-block;
+              width: auto;
+              max-width: $imgMiniSize;
+              height: auto;
+              max-height: $imgMiniSize;
+              vertical-align: middle;
+            }
+            .title {
+              line-height: 24px;
+              height: 24px;
+              display: block;
+              background: $bg;
+              padding: 0 5px;
+              overflow: hidden;
+              text-overflow:ellipsis;
+              white-space: nowrap;
+            }
+            .operate {
+              line-height: 24px;
+              height: 24px;
+              display: block;
+              overflow: hidden;
+              margin-top: 2px;
+              padding: 0 5px;
+              .edit {
+                float: left;
+                padding-left: 5px;
+              }
+              .del {
+                float: right;
+                padding-right: 5px;
+              }
+            }
+
+            .selected {
+              position: absolute;
+              right: -3px;
+              top: -3px;
+              width: $size;
+              height: 130px;
+              border: 3px solid #409eff;
+              border-radius: 3px;
+              text-align: right;
+              .icon {
+                background: #409eff;
+                text-align: center;
+                height: 24px;
+                width: 24px;
+                line-height: 24px;
+                display: inline-block;
+                font-size: 16px;
+                color: #fff;
+                border-radius: 0 0 0 3px;
+                position: absolute;
+                right: 0;
+                top: 0;
+              }
+            }
+          }
+
+          &::after {
+            content: " ";
+            display: table;
+            height: 0;
+            clear: both;
+            visibility: hidden;
+          }
+
+          .empty {
+            display: block;
+            width: 100%;
+            margin-top: 150px;
+            color: #bbb;
+            text-align: center;
+          }
+        }
+
+        :deep(.el-pagination) {
+          background: #f9f9f9;
+          position: relative;
+          padding: 5px;
+          margin: 10px 24px 0 20px;
+          text-align: right;
+          float: none;
+
+          * {
+            background: none;
+          }
+        }
+      }
+    }
+  }
+  .batch {
+    display: flex;
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    margin-left: 10px;
+    background: #F7F7F7;
+  .text {
+    height: 100%;
+    color: #606266;
+    font-size: 14px;
+    margin-left: 7px;
+    cursor:pointer;
+    :deep(.el-checkbox){
+      height: 100%;
+    }
+  }
+  }
+  .upload-block {
+    .upload-img-preview {
+      padding: 20px;
+
+      /* 上传图片预览改为使用背景图片按比例缩放方式 */
+      :deep(.el-upload--picture-card),
+      :deep(.el-upload-list--picture-card .el-upload-list__item)
+      {
+        width: 90px;
+        height: 90px;
+        line-height: 98px;
+        background-size: cover;
+        background-position: 50% 50%;
+      }
+
+      .el-upload-list--picture-card .el-upload-list__item-status-label i {
+        margin-top: 12px;
+        vertical-align: top;
+      }
+    }
+
+    .upload-tip {
+      padding: 0 20px;
+      font-size: 13px;
+      color: #999;
+    }
+
+    .upload-title {
+      font-size: 16px;
+      color: #666;
+      padding: 20px 0 0 20px;
+    }
+
+    .file-gropu-btn {
+      font-size: 14px;
+      padding: 0 20px;
+      margin: 35px 0 10px;
+    }
+    :deep(.el-upload-list__item) {
+      text-align: center;
+      line-height: 85px!important;
+    }
+    :deep(.el-upload-list--picture-card .el-upload-list__item-thumbnail) {
+      display: inline-block;
+      width: auto;
+      max-width: 88px;
+      height: auto;
+      max-height: 88px;
+      vertical-align: middle;
+    }
+  }
+  .group-box {
+    :deep(.el-dialog) {
+      width: 820px;
+  
+      .el-dialog__header {
+        border-bottom: 1px solid #e8e8e8;
+      }
+    }
+  }
+  .form {
+    margin-left: 50px;
+    :deep(.el-form-item) {
+      margin-bottom: 0;
+    }
+  }
+  
+  :deep(.el-upload-list__item-actions) {
+    a {
+      i {
+        color: #fff;
+      }
+    }
+    .el-upload-list__item-preview{
+      display: none !important;
+    }
+    .el-upload-list__item-delete{
+      margin: 0;
+    }
+  }
+  :deep(.el-upload--picture-card)
+   {
+    width: 78px;
+    height: 78px;
+    line-height: 82px;
+    border-radius: 5px;
+  }
+  .hide :deep(.el-upload--picture-card){
+    display: none;
+  }
+  .el-message-box__message p {
+    word-break: break-word;
+  }
+  :deep(.el-badge) {
+    vertical-align: bottom;
+  }
+  
+}
+
+
+
+

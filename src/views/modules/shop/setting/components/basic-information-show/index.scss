@@ -1,0 +1,56 @@
+.component-basic-info-show {
+  color: #606266;
+  font-size: 14px;
+
+  // 审核状态
+  .audit-status {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    background: #f5f5f5;
+    padding: 20px 40px;
+    line-height: 1em;
+    margin-bottom: 20px;
+
+    .week {
+      color: #666;
+    }
+  }
+
+  .logo-image-box {
+    width: 120px;
+    height: 120px;
+  }
+
+  .business-license-box {
+    display: flex;
+
+    .logo-image-box:not(:first-child) {
+      margin-left: 20px;
+    }
+  }
+
+  .logo-image {
+    width: 100%;
+    height: 100%;
+  }
+
+  .foot-box {
+    margin-left: 140px;
+  }
+
+  .noyet-wrap {
+    color: #999;
+  }
+
+  .ci-wrapper {
+    .right-wrap,
+    .left-wrap {
+      width: 50%;
+      .intro {
+        line-break: anywhere;
+      }
+    }
+  }
+}

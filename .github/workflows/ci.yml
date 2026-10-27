@@ -1,0 +1,56 @@
+name: Node.js CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    environment:
+      name: production
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Copy java.zip from remote server
+        env:
+          SSH_USER: ${{ secrets.USER }}
+          SSH_HOST: ${{ secrets.HOST }}
+          SSH_KEY: ${{ secrets.SSH_KEY }}
+        run: |
+          # Prepare SSH key
+          mkdir -p ~/.ssh
+          echo "$SSH_KEY" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 9
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Build project
+        run: pnpm build
+
+      # 1. Zip the dist folder along with the generated pnpm-lock.yaml file
+      - name: Zip build outputs
+        run: |
+          zip -r shop.zip dist/ pnpm-lock.yaml
+
+      # 2. Upload the zip file as a GitHub Actions workflow artifact
+      - name: Move ALL
+        run: |
+          scp -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no shop.zip ${{ secrets.USER }}@${{ secrets.HOST }}:/ecommerce/mall/admin/tmp/
+          echo "Uploaded marketing successfully!"

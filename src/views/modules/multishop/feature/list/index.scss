@@ -1,0 +1,18 @@
+.feature-list-container {
+  background: #FFFFFF;
+  padding: 20px;
+  .content-box {
+    margin: 20px 0;
+    .text-btn-con {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      .text-btn {
+        margin-right: 15px;
+      }
+    }
+  }
+}
+.el-pagination {
+  text-align: right;
+}

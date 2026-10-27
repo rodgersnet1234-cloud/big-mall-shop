@@ -1,0 +1,127 @@
+.store-signate-Config {
+  height: 100%;
+  overflow-y: auto;
+  top: 50px;
+  right: 0;
+  z-index: 99;
+  background: #fff;
+  padding-bottom: 45px;
+  :deep(.el-color-picker__trigger) {
+  width: 80px;
+  height: 32px;
+}
+  .special-radio {
+   :deep(.el-radio) {
+     margin-right: 45px;
+}
+}
+
+  .config-items {
+      margin-bottom: 25px;
+      display: flex;
+      .title {
+          width: 90px;
+      }
+      .add-navs {
+          width: 102px;
+          height: 28px;
+          box-sizing: border-box;
+          border: 1px solid #155BD4;
+          border-radius: 2px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          cursor: pointer;
+          span {
+              font-size: 12px;
+              color: #155BD4;
+              font-family: Microsoft YaHei,sans-serif;
+          }
+      }
+      .tips {
+          display: flex;
+          align-items: center;
+          font-size: 12px;
+          color: #999999;
+          font-family: Microsoft YaHei,sans-serif;
+          margin-left: 10px;
+      }
+      .navs-config {
+          display: flex;
+          margin-bottom: 15px;
+          margin-left: 6px;
+          align-items: center;
+          &:nth-child(1) {
+              margin-top: 15px;
+          }
+          .title {
+              width: 40px;
+              white-space: nowrap;
+              font-size: 12px;
+          }
+      }
+      .navs-items {
+          width: 100%;
+          height: 50px;
+        :deep(.el-input__wrapper) {
+          height: 28px;
+          padding: 0 5px;
+        }
+        :deep(input::-webkit-input-placeholder) { /* WebKit browsers */
+          color: #999;
+          font-size: 12px;
+        }
+        :deep(input:-moz-placeholder) { /* Mozilla Firefox 4 to 18 */
+          color: #999;
+          font-size: 12px;
+        }
+        :deep(input::-moz-placeholder) { /* Mozilla Firefox 19+ */
+          color: #999;
+          font-size: 12px;
+        }
+        :deep(input:-ms-input-placeholder) { /* Internet Explorer 10+ */
+          color: #999;
+          font-size: 12px;
+        }
+          .nav-close {
+              background: #155BD4;
+              color: #fff;
+              border-radius: 50%;
+              font-size: 15px;
+              padding: 3px;
+              position: absolute;
+              top: 8px;
+              right: 3px;
+              cursor: pointer;
+          }
+      }
+      .special-water {
+          display: flex;
+          height: 40px;
+          justify-content: center;
+          align-items: center;
+          color: rgba(153, 153, 153, 0.6);
+      }
+  }
+  .config-items.nav-solid {
+      min-height: 40px;
+      border: 1px dashed #DCDFE6 ;
+      display: flex;
+      flex-direction: column;
+  }
+  .config-items.config-bg {
+      display: flex;
+      flex-direction: column;
+      .b-title {
+          font-size: 14px;
+          color: #333;
+          font-family: Microsoft YaHei,sans-serif;
+      }
+      .b-tips {
+          font-size: 12px;
+          color: #999999;
+          font-family: Microsoft YaHei,sans-serif;
+          margin: 8px 0 15px 0;
+      }
+  }
+}

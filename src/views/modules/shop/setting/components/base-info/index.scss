@@ -1,0 +1,101 @@
+.component-base-info {
+  // 公共
+  p {
+    margin: 0;
+  }
+
+  // 基本信息模块
+  .basic-info-mod {
+    .bg-img {
+      display: flex;
+      justify-content: flex-start;
+      .business-license-box {
+        margin-right: 30px;
+        .img-tips {
+          display: block;
+          text-align: center;
+          font-size: 12px;
+          color: #666;
+          line-height: 1.5em;
+          margin-top: 8px;
+          max-width: 150px;
+          p  {
+            margin: 0;
+            padding: 0;
+          }
+        }
+      }
+    }
+  }
+  // 工商信息
+  .business-info-mod {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    :deep(.el-form) {
+      display: block;
+      width: 100%;
+      padding: 0 10px;
+    }
+    .ci-wrapper {
+      .right-info {
+        .business-license-box {
+          .license-content {
+            display: flex;
+            height: 120px;
+          }
+        }
+        .upload-tips {
+          font-size: 12px;
+          color: #999;
+          line-height: 1.5em;
+          margin-top: 10px;
+        }
+
+        // 图片上传框样式修改
+        :deep(.el-upload) {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 120px;
+          height: 121px;
+          background: #FFFFFF;
+          border: 1px solid #EAEAEA;
+          border-radius: 3px;
+          box-sizing: border-box;
+          .el-icon-plus {
+            font-size: 22px;
+            color: #EAEAEA;
+          }
+        }
+      }
+      // 店铺简介
+      .store-intro {
+        width: 300px;
+      }
+    }
+  }
+  // 脚部
+  .footer {
+    .foot-box {
+      display: block;
+      .btn {
+        display: inline-block;
+        padding: 10px 20px;
+        margin-right: 10px;
+        border-radius: 2px;
+        margin-left: 110px;
+        cursor: pointer;
+        font-size: 14px;
+      }
+      .btn:first-child {
+        background: #155bd4;
+        color: #fff;
+      }
+    }
+  }
+}
+.map{
+  width: 300px;
+  height: 300px;
+}

@@ -1,0 +1,100 @@
+.page-category {
+  padding: 20px;
+
+  // 提示
+  .tips {
+    font-size: 12px;
+    padding: 10px;
+    background: #fffaf2;
+    border: 1px solid #fedbab;
+    color: #666;
+    margin-top: 20px;
+  }
+
+  // 地址列表区域
+  .category-list {
+    display: flex;
+    margin: 20px 0;
+    overflow-x: auto;
+
+    .addr-list-box {
+      width: 50%;
+      min-width: 380px;
+
+      .addr-list {
+        height: 650px;
+        overflow: auto;
+
+        .addr-item {
+          font-size: 14px;
+          color: #444;
+          height: 48px;
+          line-height: 48px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          box-sizing: border-box;
+
+          .dot {
+            position: relative;
+            padding-left: 20px;
+            cursor: pointer;
+            width: 55%;
+            box-sizing: border-box;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+          }
+
+          .dot::before {
+            content: "";
+            position: absolute;
+            left: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 4px;
+            height: 4px;
+            border-radius: 50%;
+            background: #bbb;
+          }
+
+          .btn {
+            .tag {
+              display: inline-block;
+              margin-right: 10px;
+            }
+
+            min-width: 98px;
+            margin-right: 10px;
+          }
+        }
+
+        .addr-item:hover,
+        .addr-item.active {
+          background: #f5f7fa;
+        }
+      }
+    }
+
+    .addr-list-box.active {
+      border: 1px solid #eee;
+    }
+
+    .addr-list-box.active:not(:first-child) {
+      border-left: 0;
+    }
+
+    .nodata {
+      width: 100%;
+      text-align: center;
+      font-size: 13px;
+      color: #aaa;
+      margin-top: 50px;
+    }
+  }
+
+  .category-list.box-border {
+    border-left: 1px solid #eee;
+    border-right: 1px solid #eee;
+  }
+}

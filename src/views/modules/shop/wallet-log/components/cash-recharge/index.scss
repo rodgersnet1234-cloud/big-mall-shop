@@ -1,0 +1,18 @@
+.component-cash-recharge{
+  .form{
+    .form-input{
+      max-width:255px ;
+    }
+  }
+  .yzm-tips {
+    display: block;
+    color: #aaa;
+    margin-left: 100px;
+    line-height: 2em;
+    margin-bottom: 10px;
+  }
+
+  .recharge .recharge-money :deep(.el-dialog__header){
+    border: 1px solid rgba(0, 0, 0, 0.06);
+  }
+}
